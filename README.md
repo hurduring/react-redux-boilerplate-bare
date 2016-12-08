@@ -1,0 +1,1 @@
+A minimal boilerplate to start working on stuff.
