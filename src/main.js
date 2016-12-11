@@ -11,11 +11,11 @@ import App from './app';
 const store = createStore(appReducer);
 
 const rootEl = document.getElementById('root');
-const renderApp = (Component = App) => (
+const renderApp = () => (
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <Component />
+        <App />
       </Provider>
     </AppContainer>,
     rootEl
