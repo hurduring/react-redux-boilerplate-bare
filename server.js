@@ -16,4 +16,4 @@ app.use(devMiddleware(compiler, {
   publicPath: config.output.publicPath
 }));
 
-app.listen(8080);
+app.listen(3000);

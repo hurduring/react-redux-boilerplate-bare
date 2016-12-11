@@ -11,11 +11,11 @@ import App from './app';
 const store = createStore(appReducer);
 
 const rootEl = document.getElementById('root');
-const renderApp = () => (
+const renderApp = (Component = App) => (
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <App />
+        <Component />
       </Provider>
     </AppContainer>,
     rootEl
@@ -24,7 +24,7 @@ const renderApp = () => (
 
 if (module.hot) {
   module.hot.accept('./reducer', () => store.replaceReducer(appReducer));
-  module.hot.accept('./app', () => renderApp());
+  module.hot.accept('./app', () => renderApp(require('./app').default));
 }
 
 renderApp();
