@@ -50,6 +50,6 @@
     "start": "npm-run-all --parallel start:dev lint:watch",
     "lint:watch": "esw src --color --watch",
     "test": "cross-env BABEL_ENV=testing jest",
-    "test:watch": "jest --watch -o"
+    "test:watch": "cross-env BABEL_ENV=testing jest jest --watch -o"
   }
 }
