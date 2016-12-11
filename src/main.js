@@ -24,7 +24,7 @@ const renderApp = (Component = App) => (
 
 if (module.hot) {
   module.hot.accept('./reducer', () => store.replaceReducer(appReducer));
-  module.hot.accept('./app', () => renderApp(require('./app').default));
+  module.hot.accept('./app', () => renderApp());
 }
 
 renderApp();
