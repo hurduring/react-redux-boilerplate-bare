@@ -13,7 +13,7 @@ app.use(express.static(__dirname));
 app.use(hotMiddleware(compiler));
 app.use(devMiddleware(compiler, {
   noInfo: true,
-  publicPath: config.output.publicPath
+  // publicPath: config.output.publicPath
 }));
 
 app.listen(3000);

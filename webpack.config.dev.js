@@ -4,6 +4,7 @@ const path = require('path');
 module.exports = {
   devtool: 'eval',
   entry: [
+    'babel-polyfill',
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
     './src/main.js',

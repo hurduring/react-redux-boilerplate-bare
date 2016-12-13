@@ -49,7 +49,7 @@
     "start:dev": "node server.js",
     "start": "npm-run-all --parallel start:dev lint:watch",
     "lint:watch": "esw src --color --watch",
-    "test": "cross-env BABEL_ENV=testing jest",
-    "test:watch": "cross-env BABEL_ENV=testing jest --watch -o"
+    "test": "cross-env BABEL_ENV=testing jest src.*",
+    "test:watch": "cross-env BABEL_ENV=testing jest src.* --watch -o"
   }
 }
