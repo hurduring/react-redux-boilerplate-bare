@@ -1,15 +1,13 @@
-export default {
-  nextStep: () => ({
-    type: 'NEXT',
-  }),
-  prevStep: () => ({
-    type: 'PREVIOUS',
-  }),
-  setLocation: (routerState, action = 'PUSH') => ({
-    type: 'LOCATION_CHANGE',
-    router: {
-      action,
-      location: routerState,
-    },
-  }),
+export const types = {
+  INCREMENT_ASYNC: 'INCREMENT_ASYNC',
+  INCREMENT: 'INCREMENT',
+};
+
+export const actions = {
+  incrementAsync(action) {
+    return { type: types.INCREMENT_ASYNC, payload: action };
+  },
+  increment(action) {
+    return { type: types.INCREMENT, payload: action };
+  },
 };

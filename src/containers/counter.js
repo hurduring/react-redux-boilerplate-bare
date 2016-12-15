@@ -1,5 +1,5 @@
 import React from 'react';
-import actions from '../actions';
+import { actions } from '../actions';
 
 import { connect } from 'react-redux';
 
@@ -9,9 +9,7 @@ const Counter = ({ counter, dispatch }) => (
     <h1>Countfdsafsefdsar</h1>
     {counter}
     <hr />
-
-    <button onClick={() => dispatch(actions.nextStep())}>next</button>
-    <button onClick={() => dispatch(actions.prevStep())}>prev</button>
+    <button onClick={() => dispatch(actions.incrementAsync(5))}>next</button>
     <hr />
   </div>
 );
