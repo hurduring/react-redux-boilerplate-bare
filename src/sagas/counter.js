@@ -3,7 +3,7 @@ import { call, put } from 'redux-saga/effects'
 import { actions, types } from '../actions'
 
 function* incrementAsync(action) {
-  yield call(delay, 1000, null);
+  yield call(delay, 0, null);
   yield put(actions.increment(action.payload));
 }
 

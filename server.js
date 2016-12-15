@@ -10,10 +10,10 @@ const compiler = webpack(config);
 
 app.use(historyMiddleware());
 app.use(express.static(__dirname));
-app.use(hotMiddleware(compiler));
 app.use(devMiddleware(compiler, {
   noInfo: true,
   // publicPath: config.output.publicPath
 }));
+app.use(hotMiddleware(compiler));
 
 app.listen(3000);
